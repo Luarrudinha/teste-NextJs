@@ -1,14 +1,18 @@
+//ROTA DINAMICA 
+
 import { PostProps } from "../page";
+
 export default async function DetailPost({
-    params,
+    params,                             
 }:{
-    params:Promise<{id: string}>
-}){
+    params:Promise<{id: string}>              //pega o ID do posts, ele busca diretamente pelo post que vc digitou
+}) {
 
-    const {id} = await params;
+    const { id } = await params;
 
-    const response = await fetch('https://dummyjson.com/posts/${id}')
+    const response = await fetch(`https://dummyjson.com/posts/${id}`)
     const data: PostProps = await response.json()
+
     return(
         <div>
             <h1>Detalhes do post: {id}</h1>

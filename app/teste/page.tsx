@@ -8,9 +8,9 @@ export default function PageTeste() {
 
     useEffect(() => {                 //Executar código quando a página carrega.
         fetch('https://dummyjson.com/posts')             //O navegador pede dados para a API(Aqui o browser faz a requisição)
-            .then(res => res.json())                     //Converter a resposta da API em dados JavaScript.
-            .then(data => setPosts(data.posts))          //Atualiza o estado posts com os dados da API.
-    }, [])
+            .then(res => res.json())                     //Converter a resposta da API em dados Json.
+            .then(data => setPosts(data.posts))          //Atualiza o estado posts com os dados da API. (atualiza o setPosts)
+    }, [])       //array vazio sig rode isso só uma vez
 
     return(
         <div>
