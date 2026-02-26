@@ -66,11 +66,11 @@ export default async function PostsPage(){   //essa função é a página,permit
             {data.posts.map(post =>(    //👉 Um loop, “Para CADA post dentro de data.posts, faça isso:”  pegue o posts dentro de data
 
                 //React precisa identificar cada item da lista
-                <div key={post.id} className="bg-gray-200 p-4"> 
+                <div key={post.id} className="bg-gray-200 p-4 rounded-md"> 
                     <h2 className="font-bold">{post.title}</h2>
                     <h2>{post.body}</h2>
 
-                    <Link className="tetx-blue-500" href={`/post/${post.id}`}>
+                    <Link className="text-blue-500" href={`/post/${post.id}`}>
                     Ver sobre o post
                     </Link>
                 </div>

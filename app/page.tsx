@@ -17,11 +17,16 @@ export const metadata: Metadata ={
   }
 }
 
+export const revalidate = 60;     //ele vai revalidar o número que vai ser gerado a cada 60s
 
 export default function Home(){
+
+  const randomNumber = Math.random() * 10;      //vai gerar o número aleatório
+
   return (
     <div>
       <h1>Pagina home</h1>
+      <h2>Número gerado: {randomNumber}</h2>
     </div>
   )
 }
